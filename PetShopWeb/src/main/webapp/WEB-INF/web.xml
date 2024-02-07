@@ -1,0 +1,30 @@
+<web-app>
+    <display-name>MyWebApp</display-name>
+
+    <!-- Configurazione dei parametri di connessione al database -->
+    <context-param>
+        <param-name>javax.persistence.jdbc.driver</param-name>
+        <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.persistence.jdbc.url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/pet</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.persistence.jdbc.user</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.persistence.jdbc.password</param-name>
+        <param-value>puffo2000</param-value>
+    </context-param>
+
+    <!-- Configurazione del riferimento all'unità di persistenza JPA -->
+    <persistence-unit-ref>
+        <persistence-unit-ref-name>pu/PetShopWeb</persistence-unit-ref-name>
+        <persistence-unit-name>PetShopWeb</persistence-unit-name>
+    </persistence-unit-ref>
+
+    <!-- Altre configurazioni dell'applicazione -->
+
+</web-app>
